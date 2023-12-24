@@ -215,7 +215,7 @@ char *inet_ntoa(struct in_addr in); // 返回一个指向点分十进制数串�
 #include <arpa/inet.h>
 int inet_pton(int af, const char *src, void *dst); 
             // 返回：若成功则为1，若输入不是有效的表达格式则为0，若出错则为-1。
-const char *inet_ntop(int af, const void *src,char *dst, socklen_t size);
+const char *inet_ntop(int af, const void *src, char *dst, socklen_t size);
             // 若成功则返回指向结果的指针，若出错则为NULL。
 ```
 
