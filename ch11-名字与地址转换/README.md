@@ -158,7 +158,7 @@ syslog		514/udp
 syslog-tls	6514/tcp			# Syslog over TLS [RFC5425]
 ```
 
-如上所示，端口514在TCP和UDP上用于不同的服务。
+如上所示，端口514在TCP由shell使用，在UDP上用于 `syslog` 服务。512\~514范围内的端口都有这个特性。
 
 ### 例子：使用 `gethostbyname` 和 `getservbyname`
 
