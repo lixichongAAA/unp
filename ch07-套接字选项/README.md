@@ -22,6 +22,8 @@ int setsockopt(int sockfd, int level, int optname,
 // 均返回：若成功则为0，若出错则为-1
 ```
 
+关于这两个函数可以参见 [TCP/IP 网络编程第九章](https://github.com/lixichongAAA/TCP-IP-Network-Programming/tree/master/ch09-%E5%A5%97%E6%8E%A5%E5%AD%97%E7%9A%84%E5%A4%9A%E7%A7%8D%E5%8F%AF%E9%80%89%E9%A1%B9#2-getsockopt--setsockopt)。
+
 其中 *sockfd* 必须指向一个打开的套接字描述符，*level（级别）* 指定系统中解释选项的代码或为通用套接字代码。或为某个特定于协议的代码（例如IPv4、IPv6、TCP或SCTP）。  
 *optval* 是指向某个变量（ *\*optval* ）的指针，`setsockopt` 从中取得选项待设置的新值，`getsockopt` 则是把已获取的选项当前值存放到 *\*optval* 中。*\*optval* 选项的大小由最后一个参数指定，它对于 `setsockopt` 是一个值参数，对于 `getsockopt` 是一个值-结果参数。  
 图7-1和图7-2汇总了可由 `getsockopt` 获取或由 `setsockopt` 设置的选项。其中的 “数据类型” 列，给出了指针 *optval* 必须指向的每个选项的数据类型。我们用后跟一个花括号的记法来表示一个结构，如 linger{} 就表述 struct linger。  
@@ -91,6 +93,8 @@ int setsockopt(int sockfd, int level, int optname,
 ![7](./7.5.8_1.png)
 
 ![7](./7.5.8_2.png)
+
+这两个选项可以参见 [TCP/IP 网络编程第九章](https://github.com/lixichongAAA/TCP-IP-Network-Programming/blob/master/ch09-%E5%A5%97%E6%8E%A5%E5%AD%97%E7%9A%84%E5%A4%9A%E7%A7%8D%E5%8F%AF%E9%80%89%E9%A1%B9/README.md#3-so_sndbuf--so_rcvbuf)。
 
 ### 7.5.9 `SO_RCVLOWAT` 和 `SO_SNDLOWAT` 选项
 
@@ -229,6 +233,8 @@ TCP有两个套接字选项，它们的级别（即 `getsockopt` 和 `setsockopt
 ![7](./7.9.2_a.png)
 
 ![7](./7.9.2_b.png)
+
+该选项可以参见 [TCP/IP 网络编程第九章](https://github.com/lixichongAAA/TCP-IP-Network-Programming/blob/master/ch09-%E5%A5%97%E6%8E%A5%E5%AD%97%E7%9A%84%E5%A4%9A%E7%A7%8D%E5%8F%AF%E9%80%89%E9%A1%B9/README.md#3-tcp_nodelay)
 
 ## 7.10 SCTP 套接字选项
 
